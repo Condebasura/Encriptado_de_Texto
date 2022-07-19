@@ -12,6 +12,10 @@ const cardResult = document.querySelector(".resultado");
 
 const botonCopiar = document.querySelector(".boton_copiar"); 
 
-botonEncriptar.addEventListener("click", function(evento){
-    console.log(campoTexto.value);
+botonEncriptar.addEventListener("click", function(){
+    cardResult.textContent = campoTexto.value;
+    if(cardResult.value != ""){
+        cardNada.style.display = 'none' ;
+        campoTexto.value = '';
+    }
     })
