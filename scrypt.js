@@ -17,5 +17,6 @@ botonEncriptar.addEventListener("click", function(){
     if(cardResult.value != ""){
         cardNada.style.display = 'none' ;
         campoTexto.value = '';
+        cardResult.style.display = 'block';
     }
     })

@@ -1,0 +1,53 @@
+body{
+    background-color: darkgrey;
+    margin: 2em;
+}
+
+.contenedor{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+
+}
+
+header{background-color: black;
+    
+}
+.campo_de__texto{
+    background-color: transparent;
+    padding: 8rem;
+    border-style: none;
+    box-shadow: 2px 2px 13px 3px #434334;
+}
+
+.botones{background-color: black;
+display: flex;
+    text-align: center;
+justify-content: space-evenly;
+margin-top: 1em;
+height: 1.8em;
+}
+.card {
+    background-color: brown;
+ 
+}
+
+.card2{
+    text-align: center;
+    
+    
+}
+
+
+.resultado{
+    background-color: transparent;
+    padding: 8.5rem;
+    text-align: center;
+    box-shadow: 2px 2px 13px 3px #434333;
+}
+
+.boton_copiar{
+    padding: .5em;
+    margin-top: 1em;
+}
