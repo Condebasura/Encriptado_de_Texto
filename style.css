@@ -1,72 +1,120 @@
 body{
-    
+    background-color: rgb(180, 205, 226);
     margin: 2em;
 }
 
 .contenedor{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-around;
+    display:grid;
+    grid-template-columns: 60% 25%;
+    grid-template-rows: 100% 100%;
+    gap: 8em;
 }
 
 
 .campo_captura{
     display: flex;
+    box-shadow: 2px 1px 12px 2px #7e7e7d;
     flex-direction: column;
     justify-content: space-between;
-    border-style: double;
-    padding: 3em;
+    background-color: white;
+    padding: 6em;
+    
 }
 
 .campo_de__texto{
-    padding: 8em;
+    padding-top : 7em;
     border-style: none;
-    box-shadow: 2px 2px 13px 3px #949492;
-   
+    font-size: 20px;
+    text-align: center;
+    outline: none;
+    
 }
+
 
 .botones{
 display: flex;
 flex-direction: row;
     text-align: center;
 justify-content: space-around;
-margin-top: 1em;
-height: 1.8em;
+margin-top: 2em;
+height: 2.8em;
 
 }
+
+.button__encriptado{
+    background-color: rgb(10, 10, 202);
+    border-radius: 1.3em;
+    border-style: none;
+    color: white;
+    width: 17em;
+}
+
+.button__desencriptar{
+    background-color: #d3d3cf;
+    border-radius: 1.3em;
+    border-color:  rgb(62, 73, 231);
+    color: rgb(0, 0, 255);
+    width: 17em;
+}
+
+
 
 .campo__resultado{
+    background-color: white;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    border-style: double;
-    padding: 3em;
+    justify-content: center;  
+     box-shadow:  1px 2px 13px 2px #949492;
+
     align-items: center;
 }
-.card {
-    background-color: white;
-box-shadow: 1px 1px 13px 2px #434334;
-padding: 1.5em;
+.card {display: block;
+    padding: 2em;
+    text-align: center;
+    border-style: none;
+}
 
+
+.card_distable{
+display: none;
 }
 
 .card2{
-    display: none;
+    padding: 1.5em;
     text-align: center;
- 
+    
 }
+
+
 
 
 .resultado{
-    background-color: transparent;
-    padding: 8.5rem;
-    text-align: center;
-    box-shadow: 2px 2px 13px 3px #434333;
-}
+    display: none;
+    
+    }
 
-.boton_copiar{
-    padding: .5em;
-    margin-top: 1em;
+    .resultado_enable{
+        display: flex;
+        text-align: center;
+        color: rgb(169, 169, 223);
+        text-shadow: 1px  2px  1px rgb(48, 46, 46);
+        border-style: none;
+        overflow-x: hidden;
+        font-size: 21px;
+        
+    }
+
+.boton_copiar{display: none;
+    }
+
+    .boton_copiar__enable{
+        display: block;
+        background-color: #fafaf8;
+    border-radius: 1.3em;
+    border-color:  rgb(62, 73, 231);
+    color: rgb(0, 0, 255);
+    width: 17em;
+    height: 3.3em;
     
-    
-}
+   
+    }

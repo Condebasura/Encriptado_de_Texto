@@ -11,12 +11,14 @@ const cardNada = document.querySelector(".card");
 const cardResult = document.querySelector(".resultado");
 
 const botonCopiar = document.querySelector(".boton_copiar"); 
-
+campoTexto.value = "";
 botonEncriptar.addEventListener("click", function(){
     cardResult.textContent = campoTexto.value;
-    if(cardResult.value != ""){
-        cardNada.style.display = 'none' ;
-        campoTexto.value = '';
-        cardResult.style.display = 'block';
+    if(cardResult.textContent.length > 0){
+        cardNada.classList.toggle("card_distable");
+        cardResult.classList.toggle("resultado_enable");
+        botonCopiar.classList.toggle("boton_copiar__enable");
+        botonDesencriptar.style.backgroundColor = "white"
+        campoTexto.value = "";
     }
     })
