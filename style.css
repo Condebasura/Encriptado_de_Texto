@@ -9,7 +9,7 @@ body{
 .contenedor{
     display:grid;
     grid-template-columns: 60% 25%;
-    grid-template-rows: 100% 100%;
+    grid-template-rows: 100% ;
     gap: 8em;
 }
 
@@ -22,6 +22,7 @@ body{
     background-color: white;
     padding: 6em;
     
+    
 }
 
 .campo_de__texto{
@@ -30,8 +31,8 @@ body{
     font-size: 20px;
     text-align: center;
     outline: none;
-    text-shadow: 2.3px 2.2px 3.5px #353232;
-    color: rgb(77, 91, 117);
+    text-shadow: 2.3px 2.2px 3.5px #3012da;
+    color: rgb(28, 14, 221);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     
 }
@@ -53,7 +54,13 @@ height: 2.8em;
     border-style: none;
     color: white;
     width: 17em;
+    box-shadow: 2px 2px 12px  black
 }
+
+.button__encriptado:active{
+    box-shadow: 2px 2px 12px  white ;
+}
+
 
 .button__desencriptar{
     background-color: #d3d3cf;
@@ -61,57 +68,60 @@ height: 2.8em;
     border-color:  rgb(62, 73, 231);
     color: rgb(0, 0, 255);
     width: 17em;
+    box-shadow: 2px 2px 12px  rgb(0, 0, 0) ;
 }
 
-.condición{
+.button__desencriptar:active{
+    box-shadow: 2px 2px 12px  white ;
+}
+
+.condición{  
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
-    box-shadow:  2px 2px 12px 1px;
+    box-shadow:  2px 2px 12px 1px #7e7e7d;
     padding: 2px;
     border-radius:  2em;
     width: fit-content;
-    margin-left:  12em;
-    background-color: red;
-    color: aliceblue;
+    margin-left: 4em;
+    color: red;
     padding: 5px;
+    font-size: 12px;
+    
 }
 
 .campo__resultado{
     background-color: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;  
+    justify-content:space-around;
+    gap: 12px;
+    text-align: center;
      box-shadow:  1px 2px 13px 2px #949492;
-
     align-items: center;
 }
-.card {display: block;
+
+.card {display:block;
     padding: 2em;
-    text-align: center;
     border-style: none;
+    margin-top: 10em;
 }
 
 
-.card_distable{
-display: none;
-}
+
 
 .card2{
-    padding: 1.5em;
+    display: flex;
     text-align: center;
+    
     
 }
 
 
 
 
-.resultado{
-    display: none;
-    
-    }
 
-    .resultado_enable{
-        display: flex;
+
+    .resultado{display: none;
         text-align: center;
         text-shadow: 2.3px 2.2px 3.5px #353232;
     color:rgb(77, 91, 117);
@@ -121,21 +131,27 @@ display: none;
         outline: none;
         font-size: 21px;
         
+        
+        
+        
+        
     }
 
-.boton_copiar{display: none;
-    }
 
-    .boton_copiar__enable{
-        display: block;
+
+    .boton_copiar{ display: none;
         background-color: #fafaf8;
     border-radius: 1.3em;
     border-color:  rgb(62, 73, 231);
     color: rgb(0, 0, 255);
     width: 17em;
     height: 3.3em;
-    
-   
+    margin-top: 1em;  
+    box-shadow: 2px 2px 12px rgb(82, 80, 80); 
+    }
+
+    .boton_copiar:active{
+        box-shadow: 2px 2px 12px  white 
     }
 
     footer{

@@ -11,37 +11,49 @@ const cardNada = document.querySelector(".card");
 const cardResult = document.querySelector(".resultado");
 
 const botonCopiar = document.querySelector(".boton_copiar");
-
+campoTexto.value = "" ;
  const resultNoVacio = () => {
     if(cardResult.textContent.length > 0){
-        cardNada.classList.toggle("card_distable");
-        cardResult.classList.toggle("resultado_enable");
-        botonCopiar.classList.toggle("boton_copiar__enable");
-        botonDesencriptar.style.backgroundColor = "white"
-        campoTexto.value = "";
-
+        cardNada.style.display = "none";
+        
+        cardResult.style.display = "flex";
+        botonCopiar.style.display = "block";
+        botonDesencriptar.style.backgroundColor = "white";
+       
+       
     }
 }
-campoTexto.value = "";
+
+const textVacio = () =>{
+  if(campoTexto.value == "" ){
+    cardNada.style.display = "block"
+        cardResult.style.display = "none";
+        botonCopiar.style.display = "none";
+        botonDesencriptar.style.backgroundColor = "#d3d3cf"
+  }
+}
+
 botonEncriptar.addEventListener("click", function(){
     cardResult.textContent = campoTexto.value;
     cardResult.textContent =  cardResult.value.replace("e", "enter").replace("i", "imes").replace("a", "ai").replace("o", "ober").replace("u", "ufat") ;
-   resultNoVacio();
+    
+    resultNoVacio();
+   textVacio();
+   
     })
 
     botonDesencriptar.addEventListener("click", function(){
         cardResult.textContent = campoTexto.value;
         cardResult.textContent =  cardResult.value.replace( "enter", "e").replace("imes" , "i").replace("ai", "a").replace("ober", "o").replace("ufat", "u") ;
        resultNoVacio();
-        
-        
-        
+        textVacio();
+      
     } )
 
 
     botonCopiar.addEventListener("click" , function updateClipboard() {
         navigator.clipboard.writeText(cardResult.textContent).then(() => {
-         cardResult.textContent = "";
+         campoTexto.value = "";
         }, () => {
           /* clipboard write failed */
         });
