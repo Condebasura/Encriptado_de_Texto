@@ -11,11 +11,12 @@ const cardNada = document.querySelector(".card");
 const cardResult = document.querySelector(".resultado");
 
 const botonCopiar = document.querySelector(".boton_copiar");
+
+
 campoTexto.value = "" ;
  const resultNoVacio = () => {
     if(cardResult.textContent.length > 0){
-        cardNada.style.display = "none";
-        
+        cardNada.style.display = "none";       
         cardResult.style.display = "flex";
         botonCopiar.style.display = "block";
         botonDesencriptar.style.backgroundColor = "white";
@@ -53,7 +54,7 @@ botonEncriptar.addEventListener("click", function(){
 
     botonCopiar.addEventListener("click" , function updateClipboard() {
         navigator.clipboard.writeText(cardResult.textContent).then(() => {
-         campoTexto.value = "";
+         campoTexto.textContent = "";
         }, () => {
           /* clipboard write failed */
         });

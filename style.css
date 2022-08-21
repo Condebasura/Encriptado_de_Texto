@@ -100,6 +100,11 @@ height: 2.8em;
     align-items: center;
 }
 
+img{
+    max-width: 100%;
+}
+
+
 .card {display:block;
     padding: 2em;
     border-style: none;
@@ -122,6 +127,7 @@ height: 2.8em;
 
 
     .resultado{display: none;
+        max-width: 100%;
         text-align: center;
         text-shadow: 2.3px 2.2px 3.5px #353232;
     color:rgb(77, 91, 117);
