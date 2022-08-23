@@ -32,29 +32,45 @@ const textVacio = () =>{
         botonCopiar.style.display = "none";
         botonDesencriptar.style.backgroundColor = "#d3d3cf"
   }
-}
+};
+
+
 
 botonEncriptar.addEventListener("click", function(){
+  const campoTexto = document.querySelector("[data-form-text]");
+
+if( campoTexto.value.match(/[A-Z]/g) || campoTexto.value.match(/[\"\#\$\%\&\=\?\¡\'\¿\¨\+\*\.\,\;\:\_\!\|]/g) || campoTexto.value.match(/[áéíóú]/g)){
+   cardResult.style.color = "red";
+   cardResult.textContent = "ingrese solo letras minusculas sin acentos o caracteres especiales!!";
+ }else{
+     cardResult.style.color = "rgb(28, 14, 221)" ;
     cardResult.textContent = campoTexto.value;
     cardResult.textContent =  cardResult.value.replace("e", "enter").replace("i", "imes").replace("a", "ai").replace("o", "ober").replace("u", "ufat") ;
-    
     resultNoVacio();
    textVacio();
-   
-    })
+  }
+    });
+
 
     botonDesencriptar.addEventListener("click", function(){
-        cardResult.textContent = campoTexto.value;
+      const campoTexto = document.querySelector("[data-form-text]");
+      if( campoTexto.value.match(/[A-Z]/g) || campoTexto.value.match(/[\"\#\$\%\&\=\?\¡\'\¿\¨\+\*\.\,\;\:\_\!\|]/g) || campoTexto.value.match(/[áéíóú]/g)){
+        cardResult.style.color = "red";
+    cardResult.textContent = "ingrese solo letras minusculas sin acentos o caracteres especiales!!";
+      
+       }else{
+        cardResult.style.color = "rgb(28, 14, 221)" ;
+         cardResult.textContent = campoTexto.value;
         cardResult.textContent =  cardResult.value.replace( "enter", "e").replace("imes" , "i").replace("ai", "a").replace("ober", "o").replace("ufat", "u") ;
        resultNoVacio();
         textVacio();
-      
-    } )
+       }
+    } );
 
 
     botonCopiar.addEventListener("click" , function updateClipboard() {
         navigator.clipboard.writeText(cardResult.textContent).then(() => {
-         campoTexto.textContent = "";
+         campoTexto.value = "";
         }, () => {
           /* clipboard write failed */
         });
