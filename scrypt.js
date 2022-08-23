@@ -45,7 +45,7 @@ if( campoTexto.value.match(/[A-Z]/g) || campoTexto.value.match(/[\"\#\$\%\&\=\?\
  }else{
      cardResult.style.color = "rgb(28, 14, 221)" ;
     cardResult.textContent = campoTexto.value;
-    cardResult.textContent =  cardResult.value.replace("e", "enter").replace("i", "imes").replace("a", "ai").replace("o", "ober").replace("u", "ufat") ;
+    cardResult.textContent =  cardResult.value.toLowerCase().replace(/e/g , "enter").replace(/i/g, "imes").replace(/a/g, "ai").replace(/o/g, "ober").replace(/u/g , "ufat") ;
     resultNoVacio();
    textVacio();
   }
@@ -61,7 +61,7 @@ if( campoTexto.value.match(/[A-Z]/g) || campoTexto.value.match(/[\"\#\$\%\&\=\?\
        }else{
         cardResult.style.color = "rgb(28, 14, 221)" ;
          cardResult.textContent = campoTexto.value;
-        cardResult.textContent =  cardResult.value.replace( "enter", "e").replace("imes" , "i").replace("ai", "a").replace("ober", "o").replace("ufat", "u") ;
+        cardResult.textContent =  cardResult.value.toLowerCase().replace( /enter/g, "e").replace(/imes/g , "i").replace(/ai/g, "a").replace(/ober/g, "o").replace(/ufat/g, "u") ;
        resultNoVacio();
         textVacio();
        }
