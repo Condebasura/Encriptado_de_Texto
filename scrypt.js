@@ -42,6 +42,7 @@ botonEncriptar.addEventListener("click", function(){
 if( campoTexto.value.match(/[A-Z]/g) || campoTexto.value.match(/[\"\#\$\%\&\=\?\¡\'\¿\¨\+\*\.\,\;\:\_\!\|]/g) || campoTexto.value.match(/[áéíóú]/g)){
    cardResult.style.color = "red";
    cardResult.textContent = "ingrese solo letras minusculas sin acentos o caracteres especiales!!";
+   resultNoVacio();
  }else{
      cardResult.style.color = "rgb(28, 14, 221)" ;
     cardResult.textContent = campoTexto.value;
@@ -57,7 +58,7 @@ if( campoTexto.value.match(/[A-Z]/g) || campoTexto.value.match(/[\"\#\$\%\&\=\?\
       if( campoTexto.value.match(/[A-Z]/g) || campoTexto.value.match(/[\"\#\$\%\&\=\?\¡\'\¿\¨\+\*\.\,\;\:\_\!\|]/g) || campoTexto.value.match(/[áéíóú]/g)){
         cardResult.style.color = "red";
     cardResult.textContent = "ingrese solo letras minusculas sin acentos o caracteres especiales!!";
-      
+      resultNoVacio();
        }else{
         cardResult.style.color = "rgb(28, 14, 221)" ;
          cardResult.textContent = campoTexto.value;

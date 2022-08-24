@@ -76,15 +76,14 @@ height: 2.8em;
 }
 
 .condición{  
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: cursive, sans-serif;
     text-align: center;
     box-shadow:  2px 2px 12px 1px #7e7e7d;
-    padding: 2px;
-    border-radius:  2em;
+    padding: 4px;
+    border-radius:  4px;
     width: fit-content;
-    margin-left: 4em;
-    color: red;
-    padding: 5px;
+    margin-left: 10em;
+    color: red;   
     font-size: 12px;
     
 }
@@ -167,3 +166,8 @@ img{
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         text-shadow:  1px 1px 12px #353232;
     }
+
+
+
+
+

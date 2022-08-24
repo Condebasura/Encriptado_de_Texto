@@ -1,0 +1,110 @@
+@media  screen and (max-width: 768px) {
+   
+   
+   
+    .contenedor{
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        
+    }
+.campo_captura{border-top-right-radius: 2em ;
+    border-top-left-radius: 2em;
+ max-height: 30em;
+ padding: 1em;
+ 
+}
+
+.campo_de__texto{
+    font-size: 23px;
+    padding-top: 2em;
+}
+
+.botones{
+    margin-bottom: 2em;
+    height: 3.5em;
+    justify-content: space-evenly;
+}
+
+.button__encriptado{
+    width: 14em;
+}
+
+.button__desencriptar{
+    width: 14em;
+}
+
+.condición{
+    margin-left: 8em;
+}
+
+.campo__resultado{
+    border-bottom-right-radius: 2em ;
+    border-bottom-left-radius: 2em;
+
+}
+    img{
+        display: none;
+    }
+    .card{display: flex;
+        flex-direction: column;
+    margin-top:  2em;   
+    }
+    
+    .resultado{
+        font-size: 24px;
+        height: 10em;
+        margin-top: 1em;
+        
+    }
+
+    .boton_copiar{
+        margin-bottom: 2em;
+        width: 60%;
+        font-size: 14px;
+    }
+ footer{
+    font-size: 13px;
+ }   
+}
+
+@media  screen and (max-width: 400px){
+
+
+    body{
+        margin: .6em;
+    }
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    gap: 0.1em;
+}    
+
+.campo_de__texto{
+    font-size: 16px;
+}
+
+.botones{
+    flex-direction: column;
+align-items: center;
+justify-content: space-between;
+height: 8em;
+}
+
+.button__encriptado{
+height: 4em;
+width: 90%;
+}
+
+.button__desencriptar{
+    height: 4em;
+    width: 90%;
+}
+
+.condición{
+    font-size: 9px;
+    margin-left: 3em;
+}
+
+}
+
